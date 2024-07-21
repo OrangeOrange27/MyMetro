@@ -14,10 +14,13 @@ namespace GameServices.Providers
         
         public StationData GetData()
         {
+            var travelType = GetRandomTravelType();
+            
             var data = new StationData()
             {
-                TravelType = GetRandomTravelType(),
+                TravelType = travelType,
                 MaxPassengersCount = _config.MaxPassengersCount,
+                Icon = _config.GetIcon(travelType)
             };
             
             return data;

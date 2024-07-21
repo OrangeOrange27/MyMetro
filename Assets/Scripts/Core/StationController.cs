@@ -9,7 +9,9 @@ namespace Core
 
         public override void Initialize(StationData data)
         {
-            throw new NotImplementedException();
+            base.Initialize(data);
+
+            _maxPassengersCount = data.MaxPassengersCount;
         }
         
         public override void Dispose()

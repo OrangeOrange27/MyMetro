@@ -13,7 +13,8 @@ namespace Core
 
         public virtual void Initialize(TData data)
         {
-            throw new System.NotImplementedException();
+            _travelType = data.TravelType;
+            _image.sprite = data.Icon;
         }
 
         public virtual void Dispose()

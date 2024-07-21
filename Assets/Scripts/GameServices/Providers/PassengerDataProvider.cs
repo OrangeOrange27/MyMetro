@@ -14,9 +14,12 @@ namespace GameServices.Providers
         
         public PassengerData GetData()
         {
+            var travelType = GetRandomTravelType();
+            
             var data = new PassengerData()
             {
-                TravelType = GetRandomTravelType(),
+                TravelType = travelType,
+                Icon = _config.GetIcon(travelType)
             };
             
             return data;
